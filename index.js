@@ -20,23 +20,23 @@ let audio = document.createElement('audio')
 
 let songList = [
     {songname : "Baby One More Time",
-    songpath : "music/babyonemoretime.mp3",
-    img: "images/babyonemoretime.jpg",
+    songpath : "babyonemoretime.mp3",
+    img: "babyonemoretime.jpg",
     artistname: "Britney Spears"},
     
     {songname : "Baby Shark",
-    songpath : "music/babyshark.mp3",
-    img: "images/babyshark.jpg",
+    songpath : "babyshark.mp3",
+    img: "babyshark.jpg",
     artistname: "PinkFong"},
 
     {songname : "Twinkle Twinkle Little Star",
-    songpath : "music/twinkle.mp3",
-    img: "images/twinkle.jpg",
+    songpath : "twinkle.mp3",
+    img: "twinkle.jpg",
     artistname: "Super Simple Songs"},
 
     {songname : "Wheels on The Bus",
-    songpath : "music/wheelsonbus.mp3",
-    img: "images/wheelsonbus.jpg",
+    songpath : "wheelsonbus.mp3",
+    img: "wheelsonbus.jpg",
     artistname: "Cocomelon"}
 ]
 
