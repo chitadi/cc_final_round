@@ -1,7 +1,7 @@
 let pausePlayBtn = document.getElementById("pauseplaybtn")
 let forward = document.getElementById("nextbtn")
 let rewind = document.getElementById("prevbtn")
-let prgBar = document.querySelector("#prg-bar")
+let prgBar = document.querySelector(".prg-bar")
 let volumeNumber = document.querySelector("#volume-change")
 let songNumber = document.querySelector(".song-number")
 let cover = document.querySelector(".cover")
@@ -19,22 +19,22 @@ let isPlaying = false
 let audio = document.createElement('audio')
 
 let songList = [
-    {songname : "baby one more time",
+    {songname : "Baby One More Time",
     songpath : "music/babyonemoretime.mp3",
     img: "images/babyonemoretime.jpg",
     artistname: "Britney Spears"},
     
-    {songname : "baby shark",
+    {songname : "Baby Shark",
     songpath : "music/babyshark.mp3",
     img: "images/babyshark.jpg",
     artistname: "PinkFong"},
 
-    {songname : "twinkle twinkle little star",
+    {songname : "Twinkle Twinkle Little Star",
     songpath : "music/twinkle.mp3",
     img: "images/twinkle.jpg",
     artistname: "Super Simple Songs"},
 
-    {songname : "wheels on the bus",
+    {songname : "Wheels on The Bus",
     songpath : "music/wheelsonbus.mp3",
     img: "images/wheelsonbus.jpg",
     artistname: "Cocomelon"}
@@ -54,19 +54,6 @@ function loadTrack(index){
 loadTrack(index)
 
 
-function playsong(){
-    audio.play()
-    isPlaying = true
-}
-
-function pausesong(){
-    audio.pause()
-    isPlaying = false
-}
-
-
-
-
 
 function pausePlay(){
     if (isPlaying== false){
@@ -77,6 +64,17 @@ function pausePlay(){
     }
    
 }
+
+function playsong(){
+    audio.play()
+    isPlaying = true
+}
+
+function pausesong(){
+    audio.pause()
+    isPlaying = false
+}
+
 
 function next(){
     if(index< songList.length -1){
@@ -109,14 +107,14 @@ function change_volume(){
 }
 
 function change_duration(){
-   let prgBarPos= audio.duration * (prgBar.value)
+   let prgBarPos= audio.duration * (prgBar.value/100)
    audio.currentTime = prgBarPos
 
 }
 
 function actual_slider(){
+     
     let pos = 0 
-
     if (!isNaN(audio.duration)){
         pos = audio.currentTime * (100/audio.duration)
         prgBar.value = pos
